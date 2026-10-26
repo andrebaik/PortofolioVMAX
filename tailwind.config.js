@@ -1,0 +1,60 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        primary: "var(--color-primary)",
+        secondary: "var(--color-secondary)",
+        "background-light": "#f0f0f0",
+        "background-dark": "#1a1714",
+        "surface-light": "#FFFFFF",
+        "surface-dark": "#241f1a",
+        // Warm the neutral grays so dark-mode cards match the brown background
+        zinc: {
+          700: "#3a322a",
+          800: "#2b251f",
+          900: "#211c17",
+        },
+        "border-black": "#000000",
+        "accent-blue": "#3B82F6",
+        "accent-yellow": "#FACC15",
+        "accent-pink": "#FF6B6B",
+        "accent-green": "#39ff14",
+        "neo-black": "#0f0f0f",
+        "neo-white": "#f8f8f8",
+        "neo-cyan": "#00E5FF",
+        "neo-pink": "#FF69B4",
+        "neo-lime": "#39ff14",
+        "neo-yellow": "#FFD700",
+        "neo-magenta": "#d946ef",
+        "neo-teal": "#14b8a6",
+      },
+      fontFamily: {
+        display: ['"Lexend Mega"', "sans-serif"],
+        body: ['"Space Grotesk"', "sans-serif"],
+        sans: ['"Space Grotesk"', "sans-serif"],
+      },
+      boxShadow: {
+        neo: "5px 5px 0px 0px var(--color-shadow)",
+        "neo-hover": "8px 8px 0px 0px var(--color-shadow)",
+        "neo-sm": "3px 3px 0px 0px var(--color-shadow)",
+        "neo-dark": "5px 5px 0px 0px var(--color-shadow)",
+        "neo-hover-dark": "8px 8px 0px 0px var(--color-shadow)",
+        "neo-pink": "8px 8px 0px 0px #FF69B4",
+        "neo-magenta": "8px 8px 0px 0px #d946ef",
+        "neo-cyan-alt": "8px 8px 0px 0px #00E5FF",
+        hard: "8px 8px 0px 0px #9d4edd",
+        "hard-hover": "4px 4px 0px 0px #9d4edd",
+        "hard-green": "4px 4px 0px 0px #39ff14",
+        "hard-black": "4px 4px 0px 0px #000000",
+      },
+      borderWidth: {
+        3: "3px",
+        4: "4px",
+      },
+    },
+  },
+  plugins: [],
+};

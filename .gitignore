@@ -1,0 +1,9 @@
+node_modules/
+.env
+.env.local
+.env.*.local
+my-portfolio-api/.env
+.vercel/
+dist/
+.claude/
+.DS_Store
