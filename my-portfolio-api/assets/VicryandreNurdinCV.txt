@@ -1,0 +1,149 @@
+name: MOCHAMAD VICRYANDRE NURDIN
+nickname: Andre
+title: Full Stack Developer & AI Systems Engineer
+location: Garut Kota, Jawa Barat, Indonesia
+citizenship: Indonesia
+email: dynn.dev@gmail.com
+linkedin: https://linkedin.com/in/andrebaikk
+github: https://github.com/andrebaik
+instagram: https://instagram.com/andrenrdn_
+website: https://andrebaik.dev
+
+summary / about me:
+  Full Stack Developer and AI Systems Engineer with proven expertise in building modern, high-performance web architectures and retrieval-augmented AI systems. Skilled in React, TypeScript, Node.js, Express, and PostgreSQL/MySQL for scalable full-stack applications, alongside Python, FastAPI, ChromaDB, and open-source LLMs (Qwen 2.5) for local intelligent systems. Serving as an undergraduate Teaching Assistant at Institut Teknologi Garut (ITG) for Computer Graphics (OpenGL & WebGL) and Computer Networks. Certified in modern frontend engineering, JavaScript, React, and AI fundamentals through Dicoding Indonesia. Dedicated to clean architecture, component modularity, and deterministic data flow.
+
+experience:
+  - title: Full Stack Developer
+    company: HIMATIF ITG (Himpunan Mahasiswa Teknik Informatika)
+    location: Garut, Indonesia
+    type: Organization / Community
+    start date: January 2024
+    end date: Present
+    Tech Stack: React, TypeScript, Node.js, GSAP, Framer Motion, Tailwind CSS
+    responsibilities:
+      ● Engineered the official web portal for the Informatics Engineering Student Association with interactive GSAP & Framer Motion animations.
+      ● Delivered web applications, administrative dashboards, and REST APIs for student community operations and local SMEs.
+      ● Collaborated closely with executive board divisions to digitize organization workflows, event management, and work program calendars.
+
+  - title: Frontend Developer (WebGIS Specialist)
+    company: Pemerintah Desa Mekarjaya
+    location: Garut (Cikajang), Indonesia
+    type: Contract
+    start date: January 2026
+    end date: March 2026
+    Tech Stack: React, TypeScript, Leaflet, GeoJSON, Tailwind CSS, WebGIS
+    responsibilities:
+      ● Engineered an interactive WebGIS mapping system for village public governance and spatial infrastructure tracking.
+      ● Digitized administrative boundaries, cadastral plots, and public facility markers with custom GeoJSON layers and Leaflet clustering.
+      ● Built an accessible, responsive dashboard tailored for village administrative staff to facilitate land-use planning and asset cataloging.
+
+  - title: Teaching Assistant — Praktikum Grafik Komputer
+    company: Institut Teknologi Garut (ITG)
+    location: Garut, Indonesia
+    type: Academic / Mentorship
+    start date: February 2026
+    end date: Present
+    Tech Stack: OpenGL, WebGL, C++, JavaScript, GLSL
+    responsibilities:
+      ● Assisting undergraduate students in mastering 2D/3D graphics coordinate systems, transformations, lighting models, and rendering pipelines.
+      ● Directing practical laboratory exercises for shader programming and real-time graphics rendering loops.
+      ● Evaluating student project implementations and providing technical code reviews.
+
+  - title: Teaching Assistant — Praktikum Jaringan Komputer
+    company: Institut Teknologi Garut (ITG)
+    location: Garut, Indonesia
+    type: Academic / Mentorship
+    start date: February 2026
+    end date: Present
+    Tech Stack: Computer Networks, Cisco Packet Tracer, Subnetting, TCP/IP, Wireshark
+    responsibilities:
+      ● Guiding students through hands-on laboratory simulations covering OSI models, IPv4 subnetting (VLSM/CIDR), routing, and switching.
+      ● Assisting in packet inspection, network troubleshooting, and server-client protocol configuration.
+      ● Managing laboratory evaluation standards and student network topology assignments.
+
+education:
+  - institution: Institut Teknologi Garut (ITG)
+    degree: Bachelor of Computer Science (S1 Teknik Informatika)
+    date: "2022 – Present"
+    focus: Software Engineering & Artificial Intelligence Systems
+
+certifications:
+  - institution: Dicoding Indonesia
+    program: Belajar Dasar Pemrograman Web
+    credential_id: 2VX3O1M8OZYQ
+  - institution: Dicoding Indonesia
+    program: Belajar Dasar Pemrograman JavaScript
+    credential_id: ERZR3L49MXYV
+  - institution: Dicoding Indonesia
+    program: Belajar Membuat Front-End Web untuk Pemula
+    credential_id: EYX4N22G0ZDL
+  - institution: Dicoding Indonesia
+    program: Belajar Dasar AI (Artificial Intelligence)
+    credential_id: JXGzQWEEVPG8
+  - institution: Dicoding Indonesia
+    program: Belajar Prinsip Pemrograman SOLID
+    credential_id: JXGZ4D0QYPG8
+  - institution: Dicoding Indonesia
+    program: Memulai Dasar Pemrograman untuk Menjadi Pengembang Software
+    credential_id: 81P28E0ONPOY
+  - institution: Dicoding Indonesia
+    program: Belajar Membuat Aplikasi Web dengan React
+    credential_id: 2VX3O1O6KZYQ
+  - institution: Dicoding Indonesia
+    program: Pengenalan ke Logika Pemrograman
+    credential_id: 98XWV249WZM3
+
+languages:
+  ● Bahasa Indonesia: Native
+  ● English: Professional Working Proficiency
+
+projects:
+  - name: Chatbot RAG (Qwen2.5 + FastAPI)
+    type: AI & Full Stack
+    description: Indonesian Retrieval-Augmented Generation (RAG) assistant combining 4-bit quantized Qwen2.5-3B LLM, ChromaDB vector storage, and SSE streaming responses evaluated with ROUGE metrics.
+    tech_stack: [Python, FastAPI, ChromaDB, Qwen 2.5, RAG, React, TailwindCSS]
+    github: https://github.com/andrebaik/UAS-KecerdasanBuatan.git
+
+  - name: Work'in — Job Board Platform
+    type: Full Stack Web
+    description: Complete multi-role recruitment system (Job Seeker, Employer, Admin) with interactive job postings, real-time application pipelines, and talent management analytics.
+    tech_stack: [React 19, Express.js, MySQL, TailwindCSS, Node.js, Vite]
+    github: https://github.com/andrebaik/Job-Board.git
+    demo: https://job-board-tau-rosy.vercel.app
+
+  - name: Xolearn — Diagnostic Learning Platform
+    type: EdTech & Web
+    description: Adaptive learning diagnostic system mapping student answers against knowledge graphs to detect conceptual root causes and suggest personalized remediation.
+    tech_stack: [React, TypeScript, TailwindCSS, PostgreSQL, Data Analytics]
+    github: https://github.com/eeqyy/xora-tim-patapim.git
+
+  - name: WebGIS Desa Mekarjaya
+    type: WebGIS & Spatial Data
+    description: Spatial governance platform digitizing administrative boundaries, public infrastructure, and village demographic layers using interactive vector maps.
+    tech_stack: [React, TypeScript, Leaflet, WebGIS, GeoJSON, TailwindCSS]
+    github: https://github.com/andrebaik/webgis-mekarjaya.git
+
+  - name: Sistem Presensi & Absensi Web
+    type: Full Stack Web
+    description: Real-time digital attendance management application with server timestamp verification, monthly reconciliation summaries, and administrator management roster.
+    tech_stack: [Full Stack, JavaScript, REST API, MySQL, TailwindCSS]
+    github: https://github.com/andrebaik/web-absensi.git
+
+  - name: HIMATIF ITG Official Portal
+    type: Web Portal
+    description: Official student association portal featuring interactive cabinet structure, division activities, program calendars, and fluid GSAP/Framer Motion animations.
+    tech_stack: [React, TypeScript, GSAP, Framer Motion, TailwindCSS]
+    github: https://github.com/andrebaik/web-himatif.git
+
+  - name: Portfolio V1 — Interactive Showcase
+    type: Frontend Engineering
+    description: First-generation personal portfolio exploring component modularity, micro-interactions, and high Lighthouse performance benchmarks.
+    tech_stack: [React, JavaScript, TailwindCSS, Framer Motion, Vite]
+    github: https://github.com/andrebaik/PortofolioV1.0.git
+
+technical skills:
+  - Frontend: React, TypeScript, Tailwind CSS, Framer Motion, Vue, Next.js, HTML5, CSS3, JavaScript (ES6+), GSAP
+  - Backend: Node.js, Express, Laravel, REST APIs, Socket.IO, Zod
+  - Database: PostgreSQL, MySQL, Supabase, Prisma, Redis
+  - AI & Intelligent Systems: Python, FastAPI, ChromaDB, RAG Pipelines, Qwen 2.5, LLM Prompting, Hugging Face
+  - Tools & Workflows: Git, Docker, Vercel, Figma, GitHub Actions, VS Code, Postman

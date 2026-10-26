@@ -1,0 +1,231 @@
+# 🤖 Ultimate AI Portfolio Chatbot (RAG Starter Kit)
+
+> **Stop letting recruiters read PDFs. Let them interview your Digital Twin.**
+
+A production-ready, full-stack AI chatbot boilerplate. It uses **Retrieval-Augmented Generation (RAG)** to answer questions based strictly on your personal data (Resume, Portfolio, CV), ensuring zero hallucinations.
+
+Built with **Node.js, Express, OpenAI, and React/Next.js**.
+
+---
+
+## 🚀 Features
+
+* **RAG Engine:** Smartly queries your custom data (PDF/Text) to answer questions.
+* **Edge Streaming:** Real-time character-by-character typing effect (Server-Sent Events).
+* **Context Awareness:** Remembers the conversation history for follow-up questions.
+* **🛡️ Multi-Layer Security Guardrails:** Enterprise-grade protection against prompt injection, jailbreaking, and off-topic responses.
+* **Headless Architecture:** Separate Backend API that works with React, Vue, Angular, or any frontend.
+* **Ready-to-Deploy:** Includes Docker support and Vercel configuration.
+
+---
+
+## 🛡️ Security Guardrails
+
+This API implements a **multi-layer security architecture** to protect against prompt injection, jailbreaking, and off-topic responses:
+
+### Security Flow
+
+```
+USER INPUT
+    │
+    ▼
+┌─────────────────────────────────────────────────────────────┐
+│ Layer 1: HTTP Security                                       │
+│ • Helmet (security headers)                                  │
+│ • Rate Limiting (100 req/15min per IP)                       │
+│ • CORS Origin Whitelist                                      │
+│ • Request Body Size Limit (10kb)                             │
+└─────────────────────────────────────────────────────────────┘
+    │
+    ▼
+┌─────────────────────────────────────────────────────────────┐
+│ Layer 2: Input Validation                                    │
+│ • Message length check (max 2000 chars)                      │
+│ • Empty/null validation                                      │
+└─────────────────────────────────────────────────────────────┘
+    │
+    ▼
+┌─────────────────────────────────────────────────────────────┐
+│ Layer 3: Regex Guardrail (Fast, ~0ms)                        │
+│ • 30+ patterns for prompt injection detection                │
+│ • Catches: "ignore instructions", "DAN mode", etc.          │
+└─────────────────────────────────────────────────────────────┘
+    │
+    ▼
+┌─────────────────────────────────────────────────────────────┐
+│ Layer 4: AI Validator (gpt-4.1-nano)                         │
+│ • Semantic understanding of user intent                     │
+│ • Asks: "Is this about the portfolio? YES/NO"               │
+│ • Catches creative bypass attempts                          │
+└─────────────────────────────────────────────────────────────┘
+    │
+    ▼
+┌─────────────────────────────────────────────────────────────┐
+│ Layer 5: Main AI Response (gpt-4.1-mini)                    │
+│ • System prompt with anti-jailbreak rules                   │
+│ • Multi-language support                                    │
+└─────────────────────────────────────────────────────────────┘
+    │
+    ▼
+┌─────────────────────────────────────────────────────────────┐
+│ Layer 6: Output Guardrail                                    │
+│ • Jailbreak detection in response                           │
+│ • Political/religious content detection                     │
+│ • Unwanted code block detection                             │
+│ • Post-processing sanitization                              │
+└─────────────────────────────────────────────────────────────┘
+    │
+    ▼
+CLEAN RESPONSE TO USER
+```
+
+### Protected Against
+
+| Attack Type | Protection |
+|-------------|------------|
+| Prompt Injection | Regex + AI validation |
+| System Prompt Extraction | Input blocking + Output sanitization |
+| Role Manipulation (DAN mode) | Multi-layer detection |
+| Off-Topic Requests | AI semantic validation |
+| DoS/Abuse | Rate limiting + body size limits |
+| XSS/Security Headers | Helmet middleware |
+
+---
+
+## 🛠️ Tech Stack
+
+* **Backend:** Node.js, Express, OpenAI SDK
+* **Frontend:** React (Custom Hook provided), Next.js 14+
+* **AI Logic:** GPT-4.1-mini (Main) + GPT-4.1-nano (Validator)
+* **Security:** Helmet, express-rate-limit, Custom AI Guardrails
+
+---
+
+## 📦 Project Structure
+
+```text
+├── src/
+│   ├── config/
+│   │   └── prompts.js       # System prompt with security rules
+│   ├── controllers/
+│   │   └── chatController.js # Chat logic with guardrails integration
+│   ├── routes/
+│   │   └── api.js           # API Endpoints
+│   ├── services/
+│   │   └── openaiService.js # OpenAI client setup
+│   └── utils/
+│       ├── aiGuardrails.js  # 🛡️ Security guardrails module
+│       └── fileLoader.js    # Resume parser
+├── assets/
+│   └── context.txt          # 📍 PUT YOUR RESUME CONTENT HERE
+├── index.js                 # Entry point with security middleware
+└── .env                     # Environment variables
+```
+
+---
+
+## ⚡ Quick Start Guide
+
+### 1. Backend Setup (The Brain)
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Create a `.env` file:
+
+```env
+PORT=3000
+OPENAI_API_KEY=sk-your-openai-key-here
+```
+
+**Crucial Step:** Open `assets/context.txt` and paste your Resume or Portfolio text.
+
+Start the server:
+
+```bash
+node index.js
+# Server running on http://localhost:3000
+```
+
+### 2. Configure CORS Origins
+
+Edit `index.js` to add your frontend domains:
+
+```javascript
+const allowedOrigins = [
+  'http://localhost:8081',
+  'http://localhost:3000',
+  'https://yourdomain.com',
+  'https://www.yourdomain.com',
+];
+```
+
+---
+
+## ⚙️ Customization
+
+### Changing the "Personality"
+
+Go to `src/config/prompts.js` and modify the system prompt.
+
+### Adjusting Rate Limits
+
+In `index.js`, modify the rate limiter:
+
+```javascript
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // requests per window
+});
+```
+
+### Adding/Removing Guardrail Patterns
+
+Edit `src/utils/aiGuardrails.js` to customize:
+- `INJECTION_PATTERNS` - Regex patterns for prompt injection
+- `OFF_TOPIC_PATTERNS` - Topics to block
+- `validateInputWithAI()` - AI validator system prompt
+
+---
+
+## 🚢 Deployment
+
+### Deploying to Render/Vercel
+
+1. Push to GitHub
+2. Connect to Render.com or Vercel
+3. Add `OPENAI_API_KEY` in Environment Variables
+4. **Important:** Update `allowedOrigins` with your production domain
+
+---
+
+## ❓ FAQ
+
+**Q: How much does the two-step validation cost?**  
+A: The AI validator uses `gpt-4.1-nano` which costs ~$0.0001 per validation. Negligible compared to main responses.
+
+**Q: Can attackers bypass the guardrails?**  
+A: The multi-layer approach makes it extremely difficult. Even if one layer is bypassed, others catch it.
+
+**Q: Does it support multiple languages?**  
+A: Yes! The AI responds in the same language the user writes in.
+
+---
+
+## 📜 License & Rights
+
+### 1. Standard License (Personal)
+* ✅ **Allowed:** Use this code for **one** personal portfolio
+* ✅ **Allowed:** Host publicly on your personal domain
+* ❌ **Not Allowed:** Resell, share publicly, or use for client work
+
+### 2. 💎 Agency / Commercial License (Unlimited)
+* ✅ Unlimited client projects
+* ✅ White label rights
+* ✅ Charge your own fees
+* ❌ No resale of source code
+
+**Disclaimer:** This software is provided "as is" without warranty. You are responsible for OpenAI API costs.
