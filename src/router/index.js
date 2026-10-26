@@ -13,13 +13,13 @@ const routes = [
     path: "/",
     name: "desk",
     component: DeskPage,
-    meta: { title: "Mochamad Vicryandre Nurdin | Full Stack & AI Engineer", immersive: true },
+    meta: { title: "andrebaik", immersive: true },
   },
   {
     path: "/2d",
     name: "home",
     component: () => import("../views/HomePage.vue"),
-    meta: { title: "Mochamad Vicryandre Nurdin | 2D" },
+    meta: { title: "andrebaik" },
   },
   // Old link to the desk
   { path: "/desk", redirect: "/" },
@@ -63,7 +63,7 @@ const router = createRouter({
 
 // navigation guard to set document title
 router.beforeEach((to, from, next) => {
-  document.title = to.meta.title || "Your Portfolio Name";
+  document.title = to.meta.title || "andrebaik";
   next();
 });
 
