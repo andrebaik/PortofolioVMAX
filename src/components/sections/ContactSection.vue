@@ -202,8 +202,8 @@ const channels = [
   },
   {
     label: "WhatsApp",
-    value: "+62 822 1641 8397",
-    href: "https://wa.me/6282216418397",
+    value: "+62 895 620 019 593",
+    href: "https://wa.me/62895620019593",
     icon: "fab fa-whatsapp",
     class: "bg-primary",
     event: "whatsapp_link_clicked",
